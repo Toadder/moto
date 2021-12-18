@@ -2100,6 +2100,7 @@ input._error {
   color: transparent;
   background: none;
   position: absolute;
+  font-size: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
