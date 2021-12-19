@@ -2202,6 +2202,8 @@ textarea._error {
   height: 100%;
   width: 15px;
   cursor: pointer;
+  -webkit-appearance: none;
+  display: none;
 }
 
 .book-tour__icon {
