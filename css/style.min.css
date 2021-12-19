@@ -2186,6 +2186,7 @@ textarea._error {
 .book-tour__input input[type=date]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   display: none;
+}
 
 .book-tour__input input[type=date]::-webkit-calendar-picker-indicator{
   color: transparent;
