@@ -2177,7 +2177,7 @@ textarea._error {
 }
 
 .book-tour__input input[type=date] {
-/*   background-image: url("../img/main/tour/arrow-down.png"); */
+  background-image: url("../img/main/tour/arrow-down.png");
   background-repeat: no-repeat;
   background-size: 14px 7px;
   background-position: right 15px center;
@@ -3670,4 +3670,4 @@ textarea._error {
   }
 }
 
-/* .webp .book-tour__input input[type=date]{ background-image: url(../img/main/tour/arrow-down.webp); } */
+.webp .book-tour__input input[type=date]{ background-image: url(../img/main/tour/arrow-down.webp); }
