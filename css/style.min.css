@@ -2182,7 +2182,6 @@ textarea._error {
   background-size: 14px 7px;
   background-position: right 15px center;
   -webkit-appearance: none;
-  display: none;
 }
 
 .book-tour__input input[type=date]::-webkit-inner-spin-button {
