@@ -200,7 +200,7 @@ function popup() {
   const body = document.querySelector("body");
   const lockPadding = document.querySelectorAll(".lock-padding");
   let unlock = true;
-  const timeout = 550;
+  const timeout = 500;
 
   if (popupLinks.length > 0) {
     for (let index = 0; index < popupLinks.length; index++) {
@@ -583,17 +583,17 @@ for(const item of tourItems) {
     preventInteractionOnTransition: true,
     spaceBetween: 30,
 
+    navigation: {
+      nextEl: ".team__next",
+      prevEl: ".team__prev",
+    },
+
     lazy: {
       loadPrevNext: true,
     },
     preloadImages: false,
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
-
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".team__slider",
-    },
 
     pagination: {
       el: ".team__pagination",
@@ -644,11 +644,6 @@ for(const item of tourItems) {
       el: ".photo__pagination",
       type: "bullets",
       clickable: true,
-    },
-
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".photo__slider",
     },
 
     breakpoints: {
@@ -745,11 +740,6 @@ for(const item of tourItems) {
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
 
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".intro__body",
-    },
-
     pagination: {
       el: ".intro__pagination",
       type: "bullets",
@@ -775,11 +765,6 @@ for(const item of tourItems) {
     preloadImages: false,
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
-
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".item-path__wrapper_one",
-    },
 
     pagination: {
       el: ".item-path__pagination",
@@ -857,11 +842,6 @@ for(const item of tourItems) {
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
 
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".item-path__wrapper_two",
-    },
-
     pagination: {
       el: ".item-path__pagination",
       type: "bullets",
@@ -920,7 +900,6 @@ for(const item of tourItems) {
       },
     },
   });
-    
 
   const pathSlider_three = new Swiper(".item-path__slider_three", {
     observer: true,
@@ -937,11 +916,6 @@ for(const item of tourItems) {
     preloadImages: false,
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
-
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".item-path__wrapper_three",
-    },
 
     pagination: {
       el: ".item-path__pagination",
@@ -1018,11 +992,6 @@ for(const item of tourItems) {
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
 
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".main-tour__wrapper_base",
-    },
-
     pagination: {
       el: ".item-path__pagination",
       type: "bullets",
@@ -1098,11 +1067,6 @@ for(const item of tourItems) {
     watchSlidesProgress: true,
     watchSlidesVisibillity: true,
 
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".main-tour__wrapper_medium",
-    },
-
     pagination: {
       el: ".item-path__pagination",
       type: "bullets",
@@ -1170,11 +1134,6 @@ for(const item of tourItems) {
     parallax: true,
     speed: 1000,
     spaceBetween: 15,
-
-    mousewheel: {
-      sensitivity: 1,
-      eventsTarget: ".main-tour__wrapper_expert",
-    },
 
     lazy: {
       loadPrevNext: true,
