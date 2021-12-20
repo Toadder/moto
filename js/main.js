@@ -228,7 +228,7 @@ function popup() {
   function popupOpen(currentPopup) {
     if (currentPopup && unlock) {
       const popupActive = document.querySelector(".popup._open");
-      if (popupActive && !popupActive.classList.contains('tour')) {
+      if (popupActive && !popupActive.classList.contains("tour")) {
         popupClose(popupActive, false);
       } else {
         bodyLock();
@@ -245,7 +245,7 @@ function popup() {
   function popupClose(popupActive, doUnlock = true) {
     if (unlock) {
       popupActive.classList.remove("_open");
-      if (doUnlock && document.querySelectorAll('.popup._open').length === 0) {
+      if (doUnlock && document.querySelectorAll(".popup._open").length === 0) {
         bodyUnlock();
       }
     }
@@ -372,8 +372,7 @@ function formCheck() {
 }
 
 function fancybox(parent, selector) {
-  const 
-    swiper = document.querySelector(parent),
+  const swiper = document.querySelector(parent),
     elements = swiper.querySelectorAll(selector);
 
   for (let i = 0; i < elements.length; i++) {
@@ -384,12 +383,19 @@ function fancybox(parent, selector) {
 
       $.fancybox.open(
         $(`${parent} .swiper-slide:not(.swiper-slide-duplicate) ${selector}`),
-        {},
+        {
+          closeClick: true,
+          buttons: ["zoom", "close"],
+          mobile: {
+            clickContent: "close",
+            clickSlide: "close",
+          },
+          backFocus = false,
+        },
         index
       );
     });
   }
-
 }
 
 window.onload = function(e) {
