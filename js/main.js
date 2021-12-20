@@ -371,6 +371,27 @@ function formCheck() {
   }
 }
 
+function fancybox(parent, selector) {
+  const 
+    swiper = document.querySelector(parent),
+    elements = swiper.querySelectorAll(selector);
+
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    element.addEventListener("click", function (e) {
+      e.preventDefault();
+      const index = this.parentElement.getAttribute("data-swiper-slide-index");
+
+      $.fancybox.open(
+        $(`${parent} .swiper-slide:not(.swiper-slide-duplicate) ${selector}`),
+        {},
+        index
+      );
+    });
+  }
+
+}
+
 window.onload = function(e) {
    
    // Form Validation & Send
@@ -632,6 +653,7 @@ for(const item of tourItems) {
     slidesPerGroup: 1,
     speed: 1000,
     loopedSlides: 5,
+    slideToClickedSlide: true,
 
     lazy: {
       loadPrevNext: true,
@@ -758,6 +780,7 @@ for(const item of tourItems) {
     parallax: true,
     speed: 1000,
     spaceBetween: 15,
+    slideToClickedSlide: true,
 
     lazy: {
       loadPrevNext: true,
@@ -834,6 +857,7 @@ for(const item of tourItems) {
     speed: 1000,
     spaceBetween: 15,
     rtl: true,
+    slideToClickedSlide: true,
 
     lazy: {
       loadPrevNext: true,
@@ -909,6 +933,7 @@ for(const item of tourItems) {
     parallax: true,
     speed: 1000,
     spaceBetween: 15,
+    slideToClickedSlide: true,
 
     lazy: {
       loadPrevNext: true,
@@ -1267,7 +1292,11 @@ header();
    formCheck();
    numberInput();
    fillFeature();
-   
+
+   fancybox('.photo__slider', '.photo__img');
+   fancybox('.item-path__slider_one', '.item-path__img');
+   fancybox('.item-path__slider_two', '.item-path__img');
+   fancybox('.item-path__slider_three', '.item-path__img');
 
 }
 
